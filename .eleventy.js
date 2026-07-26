@@ -4,6 +4,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("images");
     eleventyConfig.addPassthroughCopy("admin");
     eleventyConfig.addPassthroughCopy("_redirects");
+
+    eleventyConfig.addCollection("posts", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("pages/blog/*.md");
+      });
   
     return {
       dir: {

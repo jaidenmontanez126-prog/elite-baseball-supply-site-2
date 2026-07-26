@@ -47,7 +47,7 @@ layout: null
             <img src="{{ image }}" alt="{{ title }}">
         {% endif %}
     
-        {{ body | safe }}    
+        {{ content | safe }}    
     </article>
 </main>
 

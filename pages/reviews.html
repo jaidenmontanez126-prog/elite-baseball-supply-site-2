@@ -1,75 +1,66 @@
+---
+layout: null
+
+permalink: "/pages/reviews/index.html"
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reviews | Elite Baseball Supply</title>
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="../index.html" class="logo">
-        <img src="../logo.png" alt="Elite Baseball Supply logo">      
-      </a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo">
+      <img src="/logo.png" alt="Elite Baseball Supply">
+    </a>
 
-      <nav class="main-nav">
-        <a href="../index.html">Home</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="#">Affiliate Disclosure</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <nav class="main-nav">
+      <a href="/">Home</a>
+      <a href="/pages/reviews/">Reviews</a>
+      <a href="/pages/privacy-policy/">Privacy Policy</a>
+      <a href="/pages/affiliate-disclosure/">Affiliate Disclosure</a>
+      <a href="/pages/about/">About</a>
+      <a href="/pages/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <section class="page-hero">
-    <div class="container">
-      <p class="section-label">Elite Baseball Supply Reviews</p>
-      <h1>Baseball gear reviews you can actually use</h1>
-      <p class="page-hero-text">
-        Explore honest baseball gear reviews for bats, gloves, cleats, and more.
-      </p>
-    </div>
-  </section>
+<section class="page-hero">
+  <div class="container">
+    <p class="section-label">Elite Baseball Supply Reviews</p>
+    <h1>Baseball gear reviews you can actually use</h1>
+    <p class="page-hero-text">
+      Explore honest baseball gear reviews for bats, gloves, cleats and more.
+    </p>
+  </div>
+</section>
 
-  <section class="reviews-section">
-    <div class="container">
-      <div class="reviews-grid">
-        <div class="review-card">
-          <h3>Best BBCOR Bats</h3>
-          <p>Top picks for power, balance, and overall performance.</p>
-        </div>
+<section class="reviews-section">
+  <div class="container">
+    <div class="reviews-grid">
 
-        <div class="review-card">
-          <h3>Best Baseball Gloves</h3>
-          <p>Find the right glove for infield, outfield, catcher, or youth players.</p>
-        </div>
+{% for post in collections.posts reversed %}
 
-        <div class="review-card">
-          <h3>Best Baseball Cleats</h3>
-          <p>Comfort, traction, and durability for players at different levels.</p>
-        </div>
+      <div class="review-card">
+        <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
 
-        <div class="review-card">
-          <h3>Best Batting Gloves</h3>
-          <p>Grip, comfort, and durability for practice and game use.</p>
-        </div>
+        {% if post.data.excerpt %}
+        <p>{{ post.data.excerpt }}</p>
+        {% endif %}
 
-        <div class="review-card">
-          <h3>Best Catcher’s Gear</h3>
-          <p>Protective gear recommendations for catchers who need comfort and coverage.</p>
-        </div>
-
-        <div class="review-card">
-          <h3>Best Baseball Bags</h3>
-          <p>Storage, organization, and travel-friendly baseball bag options.</p>
-        </div>
       </div>
+
+{% endfor %}
+
     </div>
-  </section>
+  </div>
+</section>
 
 </body>
 </html>

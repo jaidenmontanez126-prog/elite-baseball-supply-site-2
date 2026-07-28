@@ -1,8 +1,4 @@
-post.njk
 
----
-layout: null
----
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +36,7 @@ layout: null
         <p>
             <strong>Category:</strong> {{ category }}<br>
             <strong>Author:</strong> {{ author }}<br>
-            <strong>Published:</strong> {{ publish_date | date("MMMM d, yyyy") }}
+            <strong>Published:</strong> {{ publish_date }}        
         </p>
     
         {% if image %}

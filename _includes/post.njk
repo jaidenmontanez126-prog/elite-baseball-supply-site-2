@@ -40,8 +40,8 @@
         </p>
     
         {% if image %}
-            <img src="{{ image }}" alt="{{ title }}">
-        {% endif %}
+<img class="post-featured-image" src="{{ image }}" alt="{{ title }}">        
+{% endif %}
     
         {{ content | safe }}    
     </article>

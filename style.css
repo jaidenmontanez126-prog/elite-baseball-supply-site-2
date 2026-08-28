@@ -397,3 +397,21 @@
     margin: 30px auto;
     border-radius: 12px;
   }
+
+  .post-meta {
+    margin: 12px 0 28px;
+    padding: 14px 18px;
+    background: #ffffff;
+    border-left: 4px solid #0f4c81;
+    border-radius: 8px;
+    line-height: 1.6;
+  }
+
+  .post-card {
+    max-width: 900px;
+    margin: 40px auto 70px;
+    padding: 36px 42px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  }

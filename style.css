@@ -415,3 +415,24 @@
     border-radius: 16px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
   }
+
+  .blog-post {
+    font-size: 17px;
+    line-height: 1.75;
+    color: #222;
+  }
+  
+  .blog-post h2,
+  .blog-post h3 {
+    margin-top: 32px;
+    margin-bottom: 12px;
+    color: #0f4c81;
+  }
+  
+  .blog-post p {
+    margin-bottom: 18px;
+  }
+  
+  .blog-post ul {
+    margin: 0 0 22px 22px;
+  }

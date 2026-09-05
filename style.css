@@ -242,28 +242,7 @@
     line-height: 1.7;
   }
 
-  .cta-section {
-    background-color: #f8fafc;
-    padding: 90px 0 110px;
-  }
-  
-  .cta-box {
-    background: transparent;    border-radius: 24px;
-    padding: 56px;
-  }
-  
-  .cta-box h2 {
-    font-size: 48px;
-    color: #ffffff;
-    margin-bottom: 16px;
-    line-height: 1.15;
-  }
-  
-  .cta-box .section-description {
-    color: #dbe4f0;
-    max-width: 760px;
-    margin-bottom: 30px;
-  }
+
 
   .why-section {
     padding: 60px 0 80px;

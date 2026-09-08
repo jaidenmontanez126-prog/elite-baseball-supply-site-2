@@ -51,10 +51,12 @@ permalink: "/pages/reviews/index.html"
   <img class="review-card-image" src="{{ post.data.image }}" alt="{{ post.data.title }}">
 </a>
 {% endif %}
+<div class="review-card-content"
         <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
         {% if post.data.excerpt %}
         <p>{{ post.data.excerpt }}</p>
         {% endif %}
+      </div>
 
       </div>
 

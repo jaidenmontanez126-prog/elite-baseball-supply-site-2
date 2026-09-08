@@ -46,6 +46,11 @@ permalink: "/pages/reviews/index.html"
 
       {% for post in collections.posts %}      
       <div class="review-card">
+        {% if post.data.image %}
+<a href="{{ post.url | url }}">
+  <img class="review-card-image" src="{{ post.data.image }}" alt="{{ post.data.title }}">
+</a>
+{% endif %}
         <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
         {% if post.data.excerpt %}
         <p>{{ post.data.excerpt }}</p>

@@ -454,8 +454,16 @@
     text-decoration: none;
     font-weight: 700;
   }
-
+  .menu-toggle {
+    display: none;
+  }
   @media (max-width: 700px) {
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 20px;      
+      font-size: 30px;
+    }
     .review-card {
       width: auto;      
       grid-template-columns: 1fr;
@@ -468,5 +476,34 @@
     .review-card-image {
       width: 100%;
       height: auto;
+    }
+    max-width: 100%;
+    .header-inner {
+      position: relative;
+      flex-direction: row;   
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .logo {
+      margin-right: 0;
+    }
+    
+    .main-nav {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 15px;
+      width: 220px;
+      flex-direction: column;
+      align-items: flex-start;
+      background: white;
+      padding: 18px;
+      gap: 14px;
+      z-index: 1000;
+    }
+    .main-nav.open {
+      display: flex;
     }
   }

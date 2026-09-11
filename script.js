@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const container = document.getElementById("reviews-container");
-  
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector(".main-nav");
+    
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener("click", () => {
+        mainNav.classList.toggle("open");
+      });
+    }
     if (!container) return;
   
     try {
@@ -25,4 +32,5 @@ document.addEventListener("DOMContentLoaded", async () => {
       console.error(err);
       container.innerHTML = "<p>No reviews available.</p>";
     }
+
   });

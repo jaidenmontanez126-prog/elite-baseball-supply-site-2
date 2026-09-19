@@ -507,3 +507,11 @@
       display: flex;
     }
   }
+
+  /* Spacing between sections inside blog posts */
+.blog-post > h1:not(:first-child),
+.blog-post > h2,
+.blog-post > h3 {
+  margin-top: 48px;
+  margin-bottom: 16px;
+}

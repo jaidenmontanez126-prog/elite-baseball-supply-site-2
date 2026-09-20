@@ -2,6 +2,7 @@
 title: 5 MLB Fanatics Picks for the 2026 Postseason
 excerpt: Get ready for October with five standout MLB Fanatics picks for the
   2026 postseason, including jerseys, hats, hoodies, and more.
+image: https://fanatics.frgimages.com/new-york-yankees/mens-nike-aaron-judge-white-new-york-yankees-home-replica-jersey_pi3653000_altimages_ff_3653717-abef39ccdd2e9cd48e77alt1_full.jpg?_hv=2&w=1018
 category: Apparel
 author: Elite Baseball Supply
 date: 2026-09-20T04:39:04.287Z

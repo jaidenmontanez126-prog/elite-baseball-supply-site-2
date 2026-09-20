@@ -9,6 +9,59 @@
 <body>
 
   <script src="https://unpkg.com/decap-cms@3.0.0/dist/decap-cms.js"></script>
+  <script src="https://unpkg.com/markdown-it/dist/markdown-it.min.js"></script>
+  <script>
+    const previewMarkdown = window.markdownit({ html: true });
+  
+    function preservePreviewBlankLines(markdown) {
+      return (markdown || "").replace(/\n{3,}/g, (match) => {
+        const extraLines = match.length - 2;
+        return "\n\n" + '<div style="height:1.6em"></div>\n'.repeat(extraLines) + "\n";
+      });
+    }
+</script>
+  const PostsPreview = createClass({
+    render: function () {
+      const entry = this.props.entry;
+
+      const title = entry.getIn(["data", "title"]) || "";
+      const excerpt = entry.getIn(["data", "excerpt"]) || "";
+      const category = entry.getIn(["data", "category"]) || "";
+      const author = entry.getIn(["data", "author"]) || "";
+      const date = entry.getIn(["data", "date"]) || "";
+      const image = entry.getIn(["data", "image"]);
+      const body = entry.getIn(["data", "body"]) || "";
+
+      const processedBody = preservePreviewBlankLines(body);
+      const bodyHtml = previewMarkdown.render(processedBody);
+
+      const featuredImage = image
+        ? this.props.getAsset(image).toString()
+        : null;
+
+      return h("div", {},
+        h("h1", {}, title),
+        h("p", {}, excerpt),
+        h("div", {}, category),
+        h("strong", {}, author),
+        h("div", {}, date),
+
+        featuredImage
+          ? h("img", {
+              src: featuredImage,
+              style: { maxWidth: "100%", height: "auto" }
+            })
+          : null,
+
+        h("div", {
+          dangerouslySetInnerHTML: { __html: bodyHtml }
+        })
+      );
+    }
+  });
+
+  CMS.registerPreviewTemplate("posts", PostsPreview);
+</script>
 
   <script>
     if (window.netlifyIdentity) {

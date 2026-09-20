@@ -516,8 +516,10 @@
 
 .blog-post img {
   max-width: 100%;
-  width: 100%;
+  width: 85%;
   height: auto;
   display: block;
   object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
 }

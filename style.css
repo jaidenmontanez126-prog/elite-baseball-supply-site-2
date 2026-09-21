@@ -24,6 +24,9 @@
   .site-header {
     background-color: #ffffff;
     border-bottom: 1px solid #dddddd;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
   }
   
   .header-inner {
@@ -654,3 +657,4 @@
     transform: scale(1) rotate(360deg);
   }
 }
+

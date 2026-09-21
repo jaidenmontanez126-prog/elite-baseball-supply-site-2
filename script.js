@@ -2,7 +2,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     const container = document.getElementById("reviews-container");
     const menuToggle = document.querySelector(".menu-toggle");
     const mainNav = document.querySelector(".main-nav");
-    
+    const logo = document.querySelector(".logo");
+
+if (logo) {
+  logo.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    logo.classList.remove("logo-click-fx");
+    void logo.offsetWidth;
+    logo.classList.add("logo-click-fx");
+
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 550);
+  });
+}
     if (menuToggle && mainNav) {
       menuToggle.addEventListener("click", () => {
         mainNav.classList.toggle("open");

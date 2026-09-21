@@ -6,6 +6,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (menuToggle && mainNav) {
       menuToggle.addEventListener("click", () => {
         mainNav.classList.toggle("open");
+        document.body.classList.toggle("menu-open", mainNav.classList.contains("open"));
+        menuToggle.textContent = mainNav.classList.contains("open") ? "✕" : "☰";
+      });
+      document.addEventListener("click", (e) => {
+        if (
+          mainNav.classList.contains("open") &&
+          !mainNav.contains(e.target) &&
+          !menuToggle.contains(e.target)
+        ) {
+          mainNav.classList.remove("open");
+          document.body.classList.remove("menu-open");
+          menuToggle.textContent = "☰";
+        }
       });
     }
     if (!container) return;

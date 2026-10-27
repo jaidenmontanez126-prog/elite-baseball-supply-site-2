@@ -139,3 +139,71 @@ At the listed price of $84.99, it costs more than the Rawlings Highlight Series 
 ### **[Shop the Wilson 11.5″ A500 Series Baseball Glove at DICK’S Sporting Goods.](https://www.anrdoezrs.net/click-101620676-17280574?url=https%3A%2F%2Fwww.dickssportinggoods.com%2Fp%2Fwilson-11-5-a500-series-glove-26wilmbasefhetdvmvsyq%2F26wilmbasefhetdvmvsyq%3Fcolor%3DRed%252FBlue%252FWhite)**
 
 Disclosure: This article contains affiliate links. We may earn a commission from qualifying purchases at no additional cost to you.
+
+
+
+# **3. Mizuno 11” Youth Prospect PowerClose Series Glove — Best for Young Infielders**
+
+**Price**: $59.99 (at the time of review)
+
+**Size**: 11 inches
+
+**Color**: Red/White/Blue
+
+**Throwing Hand**: Right Hand Throw (left-hand option also listed)
+
+**Recommended Positions**: Second Base, Shortstop, Third Base
+
+## **Overview**
+
+The Mizuno 11” Youth Prospect PowerClose Series Glove is an appealing option for young baseball players developing their fielding skills.
+
+At $59.99, this glove offers a relatively affordable entry point for families looking for a youth-specific baseball glove.
+
+One of its biggest selling points is its PowerClose design, which is intended to help younger players close their gloves more easily when catching the baseball.
+
+## **What We Like**
+
+## **1. Youth-Friendly Design**
+
+Young players often struggle with gloves that are too stiff or difficult to close. The PowerClose design aims to make catching more manageable, helping developing players focus on fielding fundamentals.
+
+## **2. Good Size for Infielders**
+
+At 11 inches, this glove is worth considering for young infielders who need to field ground balls and transfer the baseball to their throwing hand.
+
+The retailer recommends it for second base, shortstop, and third base.
+
+## **3. Affordable Price**
+
+At $59.99, the Mizuno Prospect PowerClose is a reasonably priced option compared with many higher-end baseball gloves.
+
+## **4. Attractive Color Combination**
+
+The red, white, and blue design gives this glove a distinctive appearance that young players may enjoy.
+
+## **Potential Drawbacks**
+
+**\* Position-specific sizing:** An 11-inch glove may not be ideal for every player, particularly those who need a larger outfield glove.
+
+**\* Fit matters:** Parents should check their child’s hand size before purchasing.
+
+**\* Not necessarily a long-term glove:** Players may eventually need a different size or model as they grow and advance.
+
+## **Who Should Buy This Glove?**
+
+We recommend considering the Mizuno 11” Youth Prospect PowerClose Series Glove for younger players who are learning the fundamentals of infield defense.
+
+It’s particularly appealing for families looking for a youth-oriented glove without spending significantly more on advanced equipment.
+
+## **Our Verdict**
+
+## **Best For: Young Infielders Developing Their Fielding Skills**
+
+The Mizuno Youth Prospect PowerClose combines a youth-focused design, an 11-inch size, and an accessible price.
+
+For young players who need help developing confidence when catching and fielding, it’s a strong candidate to consider.
+
+## **[Check Price at DICK’S Sporting Goods](https://www.tkqlhce.com/click-101620676-17280574?url=https%3A%2F%2Fwww.dickssportinggoods.com%2Fp%2Fmizuno-11-youth-prospect-powerclose-series-glove-18mizyprspct11rhybgl%2F18mizyprspct11rhybgl%3Fcolor%3DRed%252FWhite%252FBlue)**
+
+Affiliate disclosure: Elite Baseball Supply may earn a commission from qualifying purchases made through affiliate links, at no additional cost to you.

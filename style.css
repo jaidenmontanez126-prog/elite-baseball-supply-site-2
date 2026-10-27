@@ -705,7 +705,7 @@
   .review-card {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 16px;    
     padding: 24px;
     background: #ffffff;
     border: 1px solid #e5e7eb;

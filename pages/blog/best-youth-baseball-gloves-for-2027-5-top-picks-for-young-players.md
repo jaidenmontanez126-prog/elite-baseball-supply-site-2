@@ -207,3 +207,91 @@ For young players who need help developing confidence when catching and fielding
 ## **[Check Price at DICK’S Sporting Goods](https://www.tkqlhce.com/click-101620676-17280574?url=https%3A%2F%2Fwww.dickssportinggoods.com%2Fp%2Fmizuno-11-youth-prospect-powerclose-series-glove-18mizyprspct11rhybgl%2F18mizyprspct11rhybgl%3Fcolor%3DRed%252FWhite%252FBlue)**
 
 Affiliate disclosure: Elite Baseball Supply may earn a commission from qualifying purchases made through affiliate links, at no additional cost to you.
+
+
+
+# **4. Marucci 11.25” Youth Marksman Series Glove — Best for Young Infielders**
+
+**Price**: $79.99 (at the time of writing)
+
+**Brand**: Marucci
+
+**Series**: Youth Marksman
+
+**Glove Size**: 11.25 inches
+
+**Material**: Full-grain leather
+
+**Throwing Hand**: Right Hand Throw (reviewed option)
+
+## **Overview**
+
+The Marucci 11.25” Youth Marksman Series Glove is an appealing option for young baseball players looking for a combination of comfort, durability, and style.
+
+Featuring a brown leather design with light-blue accents, this glove offers a distinctive appearance while maintaining the traditional look of a baseball glove.
+
+At $79.99, the Marksman sits in the middle of the price range for the youth gloves in our comparison, making it worth considering for families who want a leather glove without moving into premium price territory.
+
+## **Key Features**
+
+**1. Full-Grain Leather Construction**
+
+One of the standout features of the Marucci Youth Marksman is its full-grain leather construction.
+
+Leather is a popular choice for baseball gloves because it can provide durability and develop a more personalized fit as it breaks in.
+
+**2. Padded Fingers and Palm**
+
+Comfort matters, especially for younger players who are still developing their fielding skills.
+
+The Marksman features padding in the fingers and palm, designed to improve comfort when catching baseballs.
+
+**3. 11.25-Inch Glove Size**
+
+The 11.25-inch size makes this glove worth considering for young infielders, particularly those playing second base, shortstop, or third base.
+
+However, the best glove size depends on the player’s age, hand size, and personal preference.
+
+**4. Attractive Design**
+
+The brown leather and light-blue accents give this glove a distinctive appearance without sacrificing its traditional baseball styling.
+
+## Pros and Cons
+
+**Pros**
+
+\* Full-grain leather construction
+
+\* Padded fingers and palm for comfort
+
+\* 11.25-inch size suitable for consideration by youth infielders
+
+\* Attractive brown and light-blue design
+
+\* Strong customer rating on the retailer’s website
+
+## **Cons**
+
+\* May require a break-in period
+
+\* Might be too small for some older players or outfielders
+
+\* Costs more than some entry-level youth gloves
+
+## **Who Should Buy This Glove?**
+
+The Marucci Youth Marksman is worth considering for young baseball players who want to develop their defensive skills with a leather glove.
+
+It may be especially appealing to youth infielders who prefer a smaller glove for fielding ground balls and transferring the baseball to their throwing hand.
+
+Parents should confirm that the glove fits their child’s hand comfortably before purchasing.
+
+## **Final Verdict**
+
+The Marucci 11.25” Youth Marksman Series Glove earns a place in our 2027 youth baseball glove comparison thanks to its full-grain leather construction, comfort-focused padding, and reasonable midrange price.
+
+For families looking beyond basic beginner gloves, the Marksman is a compelling option to consider.
+
+## **[Check Price at DICK’S Sporting Goods](https://www.kqzyfj.com/click-101620676-17280574?url=https%3A%2F%2Fwww.dickssportinggoods.com%2Fp%2Fmarucci-11-25-youth-marksman-series-glove-25mccy1125ythmrksbgl%2F25mccy1125ythmrksbgl%3Fcolor%3DBrown)**
+
+Affiliate disclosure: Elite Baseball Supply may earn a commission when you purchase through qualifying affiliate links, at no additional cost to you.

@@ -80,7 +80,7 @@ This jersey is especially appealing to Jackson Chourio fans, younger baseball en
 
 **Our Verdict:** A strong choice for Brewers fans who want to support a rising star while wearing a classic team jersey.
 
-![Jackson Chourio Milwaukee Brewers Cream Home Replica Jersey](https://feeds.frgimages.com/_ss5_p-203195400+u-e33ldskdmzocmwhlvwf+v-ybfxvljqru3ffwqxamjp.png?_hv=2)
+![Jackson Chourio Milwaukee Brewers Cream Home Replica Jersey](<img src="https://feeds.frgimages.com/_ss5_p-203195400+u-e33ldskdmzocmwhlvwf+v-ybfxvljqru3ffwqxamjp.png?_hv=2" alt="Jackson Chourio Milwaukee Brewers Cream Jersey">)
 
 **[🛒 Shop the Jackson Chourio Brewers Jersey](https://fanatics.93n6tx.net/c/6828871/669352/9663?prodsku=203195400&u=https%3A%2F%2Fwww.fanatics.com%2Fmlb%2Fmilwaukee-brewers%2Fjerseys%2Fjackson-chourio-milwaukee-brewers-nike-home-replica-jersey-cream%2Fo-2376%2Bt-92114316%2Bd-86003490%2Bf-472236203%2Bz-9-3816315885&intsrc=APIG_5042)**
 

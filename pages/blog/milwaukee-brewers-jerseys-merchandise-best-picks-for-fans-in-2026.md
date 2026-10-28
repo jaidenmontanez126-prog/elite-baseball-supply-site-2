@@ -100,7 +100,7 @@ This jersey is ideal for Christian Yelich fans, longtime Milwaukee Brewers suppo
 
 **Our Verdict:** A stylish choice for Brewers fans who want to show their support for Christian Yelich. The navy-and-gold design makes it a versatile addition to any Milwaukee baseball fan’s collection.
 
-![Christian Yelich Milwaukee Brewers Navy Alternate Jersey](https://feeds.frgimages.com/_ss5_p-2001601893+u-6gd2xbxnfyjc9q6ruft7+v-zq12m2ipv2lxseljsyo.png?_hv=2)
+![Christian Yelich Milwaukee Brewers Navy Alternate Jersey]()
 
 **[🛒 Shop the Christian Yelich Brewers Jersey](https://fanatics.93n6tx.net/c/6828871/669352/9663?prodsku=2001601893&u=https%3A%2F%2Fwww.fanatics.com%2Fmlb%2Fmilwaukee-brewers%2Fjerseys%2Fchristian-yelich-milwaukee-brewers-nike-alternate-replica-jersey-navy%2Fo-3487%2Bt-14220916%2Bd-75445656%2Bf-5813618248%2Bz-9-3588474707&intsrc=APIG_5042)**
 

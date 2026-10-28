@@ -13,7 +13,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("admin");
     eleventyConfig.addPassthroughCopy("logo.png");
     eleventyConfig.addPassthroughCopy("_redirects");
-  
+    eleventyConfig.addFilter("absoluteUrl", function (url) {
+      if (!url) return "";
+      return new URL(url, "https://elitebaseballsupply.com").href;
+    });
     eleventyConfig.addCollection("posts", function (collectionApi) {
       return collectionApi.getFilteredByGlob("pages/blog/*.md");
     });

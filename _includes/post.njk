@@ -15,6 +15,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} | Elite Baseball Supply</title>
+    <meta property="og:type" content="article">
+<meta property="og:title" content="{{ title }} | Elite Baseball Supply">
+<meta property="og:description" content="{{ description or title }}">
+{% if image %}
+<meta property="og:image" content="{{ image | url | absoluteUrl }}">
+{% endif %}<meta property="og:url" content="https://elitebaseballsupply.com{{ page.url }}">
 
     <link rel="stylesheet" href="/style.css">
 </head>

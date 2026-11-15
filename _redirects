@@ -1,1 +1,7 @@
 /admin/* /admin/index.html 200
+/pages/reviews.html /pages/reviews/ 301
+/pages/buying-guides.html /pages/buying-guides/ 301
+/pages/about.html /pages/about/ 301
+/pages/contact.html /pages/contact/ 301
+/pages/privacy-policy.html /pages/privacy-policy/ 301
+/pages/affiliate-disclosure.html /pages/affiliate-disclosure/ 301

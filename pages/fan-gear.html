@@ -1,0 +1,7 @@
+---
+layout: base.njk
+title: Baseball Fan Gear
+permalink: /pages/fan-gear/index.html
+description: Baseball jerseys, hat comparisons, sizing advice, and gift ideas for fans.
+---
+<section class="page-intro container"><p class="eyebrow">REP YOUR TEAM</p><h1>For the fans.<br><em>All season long.</em></h1><p>Jerseys, hats, and gifts for the baseball people in your life. Find your style and check the details before you buy.</p></section><section class="section section-tinted"><div class="container"><div class="stories-grid">{% set posts = collections.posts | categoryPosts('Fan') | reverse %}{% include "cards.njk" %}</div></div></section>

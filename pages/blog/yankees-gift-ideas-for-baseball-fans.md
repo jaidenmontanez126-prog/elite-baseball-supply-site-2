@@ -6,8 +6,6 @@ category: Buying Guides
 author: Elite Baseball Supply
 date: 2026-11-08T21:34:24.154Z
 ---
-*Affiliate disclosure: This article contains affiliate links. If you purchase through them, Elite Baseball Supply may earn a commission at no additional cost to you.*
-
 Shopping for a Yankees fan? A team T-shirt, coffee mug, or tumbler can make a thoughtful gift. Here’s how to choose based on what they enjoy and use.
 
 ## 1. Yankees T-Shirts
@@ -16,7 +14,7 @@ A Yankees T-shirt is an option for someone who likes wearing their team colors, 
 
 Before buying, check the recipient’s size and preferred fit. Compare the product’s size chart, material, and front-and-back photos—designs and fabrics vary.
 
-**[Browse Yankees T-Shirts](https://fanatics.93n6tx.net/YVA66m)**
+[Browse Yankees T-Shirts](https://fanatics.93n6tx.net/YVA66m)
 
 ## 2. Yankees Coffee Mugs
 
@@ -26,7 +24,7 @@ Compare the capacity, handle shape, and material. Check whether the specific mug
 
 If you choose a personalized design, double-check the spelling and review its delivery and return conditions.
 
-**[Browse Yankees Mugs](https://fanatics.93n6tx.net/DW6PPo)**
+[Browse Yankees Mugs](https://fanatics.93n6tx.net/DW6PPo)
 
 ## 3. Yankees Tumblers
 
@@ -36,7 +34,7 @@ Look at the capacity, lid style, and dimensions. Some designs have straws or han
 
 For someone who drives often, check the tumbler’s dimensions against their cup holder.
 
-**[Browse Yankees Tumblers](https://fanatics.93n6tx.net/QY9ooM)**
+[Browse Yankees Tumblers](https://fanatics.93n6tx.net/QY9ooM)
 
 ## Which Gift Should You Choose?
 

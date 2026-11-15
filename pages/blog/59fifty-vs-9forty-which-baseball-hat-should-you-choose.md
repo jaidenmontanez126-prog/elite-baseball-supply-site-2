@@ -6,8 +6,6 @@ category: Apparel
 author: Elite Baseball Supply
 date: 2026-11-07T01:29:32.586Z
 ---
-*Affiliate disclosure: This post contains affiliate links. If you buy through these links, Elite Baseball Supply may earn a commission at no additional cost to you.*
-
 ## 59FIFTY vs. 9FORTY: What’s the Difference?
 
 Shopping for a baseball hat involves more than choosing your favorite team. The fit and shape matter, too.
@@ -36,6 +34,6 @@ Both families include variations, so review the exact product’s photos, descri
 
 ## Shop Your Favorite Team
 
-**[Browse 59FIFTY fitted hats](https://fanatics.93n6tx.net/Gby9Vm)**
+[Browse 59FIFTY fitted hats](https://fanatics.93n6tx.net/Gby9Vm)
 
-**[Browse 9FORTY adjustable hats](https://fanatics.93n6tx.net/B53Lyy)**
+[Browse 9FORTY adjustable hats](https://fanatics.93n6tx.net/B53Lyy)

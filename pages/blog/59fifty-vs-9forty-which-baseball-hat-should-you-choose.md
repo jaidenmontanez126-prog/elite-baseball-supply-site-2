@@ -2,6 +2,7 @@
 title: "59FIFTY vs. 9FORTY: Which Baseball Hat Should You Choose?"
 excerpt: Fitted or adjustable? Compare New Era’s 59FIFTY and 9FORTY baseball
   hats to find the style that fits your preferences.
+image: /images/uploads/59fifty-vs.-9forty-cap-styles.png
 category: Apparel
 author: Elite Baseball Supply
 date: 2026-11-07T01:29:32.586Z

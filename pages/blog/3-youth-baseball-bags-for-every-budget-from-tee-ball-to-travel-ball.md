@@ -12,9 +12,9 @@ A baseball bag can look plenty big in the store. Then the helmet goes in, the gl
 
 Buy for the gear your player carries every week. A tee-ball player with one bat and a small helmet has a different packing list from a travel-ball player who brings two bats, cleats, and an extra layer. Here are three bags to compare, starting with the smallest.
 
-### Around $25 — Rawlings Youth Rookie Tee Ball Bat Pack
+### [Around $25 — Rawlings Youth Rookie Tee Ball Bat Pack](https://www.tkqlhce.com/click-101620676-17023985?url=https%3A%2F%2Fwww.dickssportinggoods.com%2Fp%2Frawlings-youth-rookie-tee-ball-bat-pack-25rawybaserktbllbtaqy%2F25rawybaserktbllbtaqy%3Fcolor%3DAmericana)
 
-Best for a first season with a short gear list. At about 16 inches tall, this is the smallest of the three picks. It has two bat storage spots, one main compartment, and a front accessory pocket. DICK’S showed 4.8 stars across 29 reviews on the product page reviewed for this guide. Some of the visible reviews were marked as incentivized, so use the feedback alongside your own fit check.
+[Best for a first season with a short gear list. At about 16 inches tall, this is the smallest of the three picks. It has two bat storage spots, one main compartment, and a front accessory pocket. DICK’S showed 4.8 stars across 29 reviews on the product page reviewed for this guide. Some of the visible reviews were marked as incentivized, so use the feedback alongside your own fit check.](https://www.tkqlhce.com/click-101620676-17023985?url=https%3A%2F%2Fwww.dickssportinggoods.com%2Fp%2Frawlings-youth-rookie-tee-ball-bat-pack-25rawybaserktbllbtaqy%2F25rawybaserktbllbtaqy%3Fcolor%3DAmericana)
 
 Before you buy: Put the helmet and fielding glove in together. If the helmet has a face guard or already takes up most of the compartment, bring it to the store and try the next size up too.
 
@@ -22,7 +22,7 @@ Before you buy: Put the helmet and fielding glove in together. If the helmet has
 
 [Check the Rawlings Rookie Tee Ball Bat Pack at DICK’S](https://www.tkqlhce.com/click-101620676-17023985?url=https%3A%2F%2Fwww.dickssportinggoods.com%2Fp%2Frawlings-youth-rookie-tee-ball-bat-pack-25rawybaserktbllbtaqy%2F25rawybaserktbllbtaqy%3Fcolor%3DAmericana)
 
-### Around $45 — DeMarini Youth Voodoo Junior Bat Pack
+### [Around $45 — DeMarini Youth Voodoo Junior Bat Pack](https://www.jdoqocy.com/click-101620676-17023985?url=https%3A%2F%2Fwww.dickssportinggoods.com%2Fp%2Fdemarini-youth-voodoo-junior-bat-pack-19demyvdjr20xxxxxbbg%2F19demyvdjr20xxxxxbbg%3Fcolor%3DPink)
 
 Best for an everyday youth setup. This 17-inch pack has two mesh bat sleeves, a main compartment designed for a helmet and glove, and a fence hook. The hook is handy when your player needs to grab gear from a crowded dugout. DICK’S showed 4.6 stars across 35 reviews. One buyer reported that the bag held up for more than two years but filled up quickly. That’s the trade-off to pay attention to if your kid carries extras.
 
@@ -32,7 +32,7 @@ Before you buy: Load the helmet and glove, then add everything else your player 
 
 [Check the DeMarini Voodoo Junior Bat Pack at DICK’S](https://www.jdoqocy.com/click-101620676-17023985?url=https%3A%2F%2Fwww.dickssportinggoods.com%2Fp%2Fdemarini-youth-voodoo-junior-bat-pack-19demyvdjr20xxxxxbbg%2F19demyvdjr20xxxxxbbg%3Fcolor%3DPink)
 
-### Around $65 — Marucci F5 Bat Pack
+### [Around $65 — Marucci F5 Bat Pack](https://www.anrdoezrs.net/click-101620676-17023985?url=https%3A%2F%2Fwww.dickssportinggoods.com%2Fp%2Fmarucci-f5-bat-pack-19mccyf5btpckxxxxbbg%2F19mccyf5btpckxxxxbbg%3Fcolor%3DGrey)
 
 Best for a bigger load or muddy cleats. The reason I’d pay more for the F5 is the bottom storage area for separating dirty gear. If your player routinely stuffs dusty cleats next to their glove, that solves a problem they’ll run into all season. DICK’S listed 157 reviews for the F5 in its bag catalog, the largest review count of these three picks. [DICK’S baseball bag catalog](https://www.tkqlhce.com/click-101620676-17023985?url=https%3A%2F%2Fwww.dickssportinggoods.com%2Fa%2Fteam-bat-bag-0rtz04a.html)
 

@@ -3,7 +3,158 @@ layout: base.njk
 title: Elite Baseball Supply
 description: Baseball gear without the guesswork. Explore equipment comparisons, practical buying guides, and picks for baseball fans.
 ---
-<section class="home-hero"><div class="container hero-grid"><div class="hero-copy"><p class="eyebrow light">FOR THE LOVE OF THE GAME</p><h1>Good gear.<br>Better <em>baseball.</em></h1><p class="hero-deck">From your first glove to your next favorite jersey. Find equipment comparisons and practical advice that help you choose with confidence.</p><div class="hero-actions"><a class="button button-red" href="/pages/reviews/">Explore gear reviews <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="/pages/buying-guides/">Find a buying guide →</a></div><p class="hero-note">BATS / GLOVES / FAN GEAR</p></div><a class="hero-feature" href="/pages/blog/2027-easton-hype-fire-usssa-review-is-it-worth-399-99/"><div class="feature-top"><span class="pill">IN THE SPOTLIGHT</span><span>01 / BATS</span></div><div class="hero-product"><img src="https://dks.scene7.com/is/image/dkscdn/26EASBBASEXH638YBAYEM_is?$UTPMain$" width="700" height="500" alt="Easton Hype Fire baseball bat"></div><div class="feature-caption"><span class="eyebrow">THE PREMIUM BAT QUESTION</span><h2>Easton Hype Fire.<br>Worth the investment?</h2><span class="feature-arrow" aria-hidden="true">↗</span><p>Explore the construction, drop options, and trade-offs.</p></div></a></div></section>
+<section class="home-hero"><div class="container hero-grid"><div class="hero-copy"><p class="eyebrow light">FOR THE LOVE OF THE GAME</p><h1>Good gear.<br>Better <em>baseball.</em></h1><p class="hero-deck">From your first glove to your next favorite jersey. Find equipment comparisons and practical advice that help you choose with confidence.</p><div class="hero-actions"><a class="button button-red" href="/pages/reviews/">Explore gear reviews <span aria-hidden="true">↗</span></a><a class="hero-secondary" href="/pages/buying-guides/">Find a buying guide →</a></div><p class="hero-note">BATS / GLOVES / FAN GEAR</p></div><section class="spotlight" aria-label="Featured articles">
+  <div class="spotlight-slides">
+    <a class="hero-feature spotlight-slide" data-active href="/pages/blog/2027-easton-hype-fire-usssa-review-is-it-worth-399-99/"><div class="feature-top"><span class="pill">IN THE SPOTLIGHT</span><span>BATS</span></div><div class="hero-product"><img src="https://dks.scene7.com/is/image/dkscdn/26EASBBASEXH638YBAYEM_is?$UTPMain$" width="700" height="500" alt="Easton Hype Fire baseball bat"></div><div class="feature-caption"><span class="eyebrow">THE PREMIUM BAT QUESTION</span><h2>Easton Hype Fire.<br>Worth the investment?</h2><span class="feature-arrow" aria-hidden="true">↗</span><p>Explore the construction, drop options, and trade-offs.</p></div></a>
+    {% for post in collections.posts | reverse %}
+      {% if loop.index <= 4 and post.url != '/pages/blog/2027-easton-hype-fire-usssa-review-is-it-worth-399-99/' %}
+        <a class="hero-feature spotlight-slide" href="{{ post.url }}" inert aria-hidden="true">
+          <div class="feature-top"><span class="pill">IN THE SPOTLIGHT</span><span>{{ post.data.category }}</span></div>
+          {% if post.data.image %}
+          <div class="hero-product"><img src="{{ post.data.image }}" width="700" height="500" loading="lazy" alt=""></div>
+          {% else %}
+          <div class="hero-product spotlight-cover" aria-hidden="true"><img src="/logo.png" width="128" height="128" alt=""></div>
+          {% endif %}
+          <div class="feature-caption">
+            <h2>{{ post.data.title }}</h2>
+            <span class="feature-arrow" aria-hidden="true">↗</span>
+            <p>{{ post.data.excerpt }}</p>
+          </div>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="spotlight-controls" hidden>
+    <button type="button" data-step="-1">Previous</button>
+    <button type="button" data-playback>Pause</button>
+    <button type="button" data-step="1">Next</button>
+  </div>
+  <p class="spotlight-status" role="status"></p>
+</section>
+<style>
+  .spotlight { min-width: 0; }
+  .spotlight-slides { display: grid; }
+  .spotlight-slides .spotlight-slide {
+    grid-area: 1 / 1;
+    min-width: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .35s ease, visibility .35s;
+  }
+  .spotlight-slides .spotlight-slide[data-active] {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+  }
+  .spotlight-slide:hover { transform: none; }
+  .spotlight-slide h2 { overflow-wrap: anywhere; }
+  .spotlight .spotlight-cover {
+    background: radial-gradient(ellipse at center, #fff 35%, #e8edf0);
+  }
+  .spotlight-cover img {
+    width: 128px;
+    height: 128px;
+    mix-blend-mode: multiply;
+  }
+  .spotlight-controls:not([hidden]) {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: .75rem;
+  }
+  .spotlight-controls button {
+    min-height: 44px;
+    padding: .3rem .85rem;
+    border: 1px solid #647589;
+    border-radius: 999px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: .875rem;
+  }
+  .spotlight-controls button:hover { background: #ffffff17; }
+  .spotlight-controls button:focus-visible { outline-color: #ff9b89; }
+  .spotlight-status {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .spotlight-slides .spotlight-slide { transition: none; }
+  }
+</style>
+<script>
+  (() => {
+    const spotlight = document.querySelector('.spotlight');
+    const slides = Array.from(spotlight.querySelectorAll('.spotlight-slide'));
+    if (slides.length < 2) return;
+
+    const controls = spotlight.querySelector('.spotlight-controls');
+    const playback = controls.querySelector('[data-playback]');
+    const status = spotlight.querySelector('.spotlight-status');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let current = 0;
+    let playing = !reducedMotion.matches;
+    let hovered = false;
+    let timer;
+
+    function advance(step, announce = false) {
+      const previous = slides[current];
+      previous.removeAttribute('data-active');
+      previous.setAttribute('aria-hidden', 'true');
+      previous.inert = true;
+
+      current = (current + step + slides.length) % slides.length;
+      const active = slides[current];
+      active.setAttribute('data-active', '');
+      active.removeAttribute('aria-hidden');
+      active.inert = false;
+      if (announce) status.textContent = active.querySelector('h2').textContent.trim();
+    }
+
+    function schedule() {
+      clearTimeout(timer);
+      if (playing && !hovered && !document.hidden) {
+        timer = setTimeout(() => {
+          advance(1);
+          schedule();
+        }, 6000);
+      }
+    }
+
+    function setPlaying(value) {
+      playing = value;
+      playback.textContent = playing ? 'Pause' : 'Play';
+      schedule();
+    }
+
+    spotlight.addEventListener('pointerenter', event => {
+      if (event.pointerType === 'touch') return;
+      hovered = true;
+      schedule();
+    });
+    spotlight.addEventListener('pointerleave', () => {
+      hovered = false;
+      schedule();
+    });
+    spotlight.querySelector('.spotlight-slides').addEventListener('focusin', () => setPlaying(false));
+    document.addEventListener('visibilitychange', schedule);
+    reducedMotion.addEventListener('change', () => setPlaying(!reducedMotion.matches));
+
+    controls.querySelectorAll('[data-step]').forEach(button => {
+      button.addEventListener('click', () => {
+        setPlaying(false);
+        advance(Number(button.dataset.step), true);
+      });
+    });
+    playback.addEventListener('click', () => setPlaying(!playing));
+
+    controls.hidden = false;
+    setPlaying(playing);
+  })();
+</script></div></section>
 <div class="disclosure-strip"><div class="container"><span class="disclosure-label">A QUICK HEADS-UP</span><p>Some links support this site through commissions, at no extra cost to you. <a href="/pages/affiliate-disclosure/">How it works ↗</a></p></div></div>
 <section class="section container"><div class="section-heading"><div><p class="eyebrow">PICK YOUR STARTING POINT</p><h2>What’s your game?</h2></div><p>For the field. For the stands.<br>Start with what you need.</p></div><div class="category-grid"><a class="category-card" href="/pages/reviews/#bats"><span class="category-number">01 / EQUIPMENT</span><h3>Bats<span>↗</span></h3><p>Construction, certification, and the right drop.</p></a><a class="category-card" href="/pages/reviews/#gloves"><span class="category-number">02 / EQUIPMENT</span><h3>Gloves<span>↗</span></h3><p>Find your fit. Compare leather, feel, and value.</p></a><a class="category-card dark" href="/pages/fan-gear/"><span class="category-number">03 / OFF THE FIELD</span><h3>Fan gear<span>↗</span></h3><p>Your team. Your style. Jerseys, hats, and gifts.</p></a></div></section>
 <section class="section section-tinted"><div class="container"><div class="section-heading"><div><p class="eyebrow">THE LATEST FROM THE DUGOUT</p><h2>Worth a closer look.</h2></div><a class="text-link" href="/pages/buying-guides/">All buying guides ↗</a></div><div class="stories-grid">{% set posts = collections.posts | reverse %}{% include "cards.njk" %}</div></div></section>

@@ -1,4 +1,99 @@
 ---
 layout: base.njk
 ---
-<div class="container article-shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="{{ '/pages/reviews/' if category == 'Bats' or category == 'Gloves' else '/pages/fan-gear/' }}">{{ 'Gear reviews' if category == 'Bats' or category == 'Gloves' else 'Fan gear' }}</a><span>/</span><span>{{ category }}</span></nav><header class="article-header"><p class="eyebrow">{{ category }} / THE GEAR GUIDE</p><h1>{{ title }}</h1><p class="article-excerpt">{{ excerpt }}</p><div class="article-meta"><span>By {{ author or 'Elite Baseball Supply' }}</span><time datetime="{{ date | isoDate }}">{{ date | dateDisplay }}</time></div></header><div class="article-layout"><article class="article-body"><aside class="article-disclosure">This article contains affiliate links. We may earn a commission if you buy through them, at no extra cost to you. <a href="/pages/affiliate-disclosure/">Learn more</a>.</aside>{% if image %}<div class="article-image"><img src="{{ image }}" alt="{{ title }}" width="900" height="600"></div>{% endif %}<div class="prose">{{ content | safe }}</div><div class="article-end"><p class="eyebrow">BEFORE YOU BUY</p><p>Check the exact model, sizing, current price, and retailer terms. For equipment, confirm your league’s requirements.</p><a class="text-link" href="/pages/buying-guides/">Explore more buying guides ↗</a></div></article><aside class="article-sidebar"><div class="sidebar-box"><p class="eyebrow">KEEP EXPLORING</p><h2>Your next good find.</h2><a href="/pages/reviews/#bats">Baseball bats ↗</a><a href="/pages/reviews/#gloves">Baseball gloves ↗</a><a href="/pages/fan-gear/">Fan gear & gifts ↗</a><a href="/pages/buying-guides/">All buying guides ↗</a></div><p class="sidebar-note">Shopping for gear?<br>Fit and the exact model matter more than the name on the label.</p></aside></div></div>
+<style>
+  .article-reading-area {
+    --reading-background: #fff;
+    --reading-link: #1c5675;
+    background: var(--reading-background);
+    color: var(--ink);
+  }
+  @media (prefers-color-scheme: dark) {
+    html:not([data-reading-theme="light"]) .article-reading-area {
+      --reading-background: #202429;
+      --reading-link: #a1d8f4;
+      --ink: #edf0f2;
+      --muted: #bcc5cd;
+      --paper: #2b3138;
+      --line: #49535f;
+      --red: #ff9b89;
+      color-scheme: dark;
+    }
+  }
+  html[data-reading-theme="dark"] .article-reading-area {
+    --reading-background: #202429;
+    --reading-link: #a1d8f4;
+    --ink: #edf0f2;
+    --muted: #bcc5cd;
+    --paper: #2b3138;
+    --line: #49535f;
+    --red: #ff9b89;
+    color-scheme: dark;
+  }
+  .article-reading-area .prose a { color: var(--reading-link); }
+  .article-reading-area .article-image,
+  .article-reading-area .prose img { background: #fff; }
+  .article-reading-area .sidebar-box { --red: #d83b30; }
+  .reading-theme-control {
+    align-items: center;
+    display: inline-flex;
+    gap: .65rem;
+    margin-bottom: 1rem;
+    color: var(--muted);
+    font-size: .875rem;
+  }
+  .reading-theme-control select {
+    border: 1px solid var(--line);
+    border-radius: .375rem;
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    min-height: 44px;
+    padding: .35rem .65rem;
+  }
+  .reading-theme-control select:focus-visible {
+    outline: 2px solid var(--reading-link);
+    outline-offset: 3px;
+  }
+</style>
+<script>
+  (() => {
+    const key = 'ebs-reading-theme';
+    const root = document.documentElement;
+
+    try {
+      const saved = localStorage.getItem(key);
+      if (saved === 'light' || saved === 'dark') root.dataset.readingTheme = saved;
+    } catch {
+      // Device settings still work when storage is unavailable.
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const control = document.querySelector('#reading-theme');
+      control.value = root.dataset.readingTheme || 'system';
+      control.closest('label').hidden = false;
+      control.addEventListener('change', () => {
+        if (control.value === 'system') delete root.dataset.readingTheme;
+        else root.dataset.readingTheme = control.value;
+
+        try {
+          localStorage.setItem(key, control.value);
+        } catch {
+          // The selected theme still applies to this page.
+        }
+      });
+    });
+  })();
+</script>
+<div class="article-reading-area">
+<div class="container article-shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="{{ '/pages/reviews/' if category == 'Bats' or category == 'Gloves' else '/pages/fan-gear/' }}">{{ 'Gear reviews' if category == 'Bats' or category == 'Gloves' else 'Fan gear' }}</a><span>/</span><span>{{ category }}</span></nav>
+<label class="reading-theme-control" hidden>
+  Reading theme
+  <select id="reading-theme">
+    <option value="system">System</option>
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+  </select>
+</label>
+<header class="article-header"><p class="eyebrow">{{ category }} / THE GEAR GUIDE</p><h1>{{ title }}</h1><p class="article-excerpt">{{ excerpt }}</p><div class="article-meta"><span>By {{ author or 'Elite Baseball Supply' }}</span><time datetime="{{ date | isoDate }}">{{ date | dateDisplay }}</time></div></header><div class="article-layout"><article class="article-body"><aside class="article-disclosure">This article contains affiliate links. We may earn a commission if you buy through them, at no extra cost to you. <a href="/pages/affiliate-disclosure/">Learn more</a>.</aside>{% if image %}<div class="article-image"><img src="{{ image }}" alt="{{ title }}" width="900" height="600"></div>{% endif %}<div class="prose">{{ content | safe }}</div><div class="article-end"><p class="eyebrow">BEFORE YOU BUY</p><p>Check the exact model, sizing, current price, and retailer terms. For equipment, confirm your league’s requirements.</p><a class="text-link" href="/pages/buying-guides/">Explore more buying guides ↗</a></div></article><aside class="article-sidebar"><div class="sidebar-box"><p class="eyebrow">KEEP EXPLORING</p><h2>Your next good find.</h2><a href="/pages/reviews/#bats">Baseball bats ↗</a><a href="/pages/reviews/#gloves">Baseball gloves ↗</a><a href="/pages/fan-gear/">Fan gear & gifts ↗</a><a href="/pages/buying-guides/">All buying guides ↗</a></div><p class="sidebar-note">Shopping for gear?<br>Fit and the exact model matter more than the name on the label.</p></aside></div></div>
+</div>

@@ -38,7 +38,7 @@ Best for a bigger load or muddy cleats. The reason I’d pay more for the F5 is 
 
 Before you buy: Check that both cleats fit in the bottom section with the rest of the bag loaded. Then put the bats in their sleeves and make sure there’s still a convenient place for the water bottle.
 
-![](/images/uploads/wtd9106_hp-pink_ar-alt2.webp)
+![](/images/uploads/19mccyf5btpckxxxxbbg_grey.webp)
 
 [Check the Marucci F5 Bat Pack at DICK’S](https://www.anrdoezrs.net/click-101620676-17023985?url=https%3A%2F%2Fwww.dickssportinggoods.com%2Fp%2Fmarucci-f5-bat-pack-19mccyf5btpckxxxxbbg%2F19mccyf5btpckxxxxbbg%3Fcolor%3DGrey)
 

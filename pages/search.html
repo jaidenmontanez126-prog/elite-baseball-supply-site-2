@@ -1,0 +1,103 @@
+---
+layout: base.njk
+title: Search
+description: Find baseball gear reviews and buying guides by product, brand, or topic.
+permalink: /search/
+---
+<section class="container section site-search">
+  <h1>Search baseball gear</h1>
+  <form action="/search/" method="get" role="search" class="site-search-form" hidden>
+    <label for="gear-query">Product, brand, or topic</label>
+    <div class="site-search-fields">
+      <input id="gear-query" type="search" name="q" placeholder="Try Marucci F5 or drop 8" maxlength="160">
+      <button class="button button-red" type="submit">Search</button>
+    </div>
+  </form>
+  <p class="site-search-status" role="status">Browse articles</p>
+  <ul class="site-search-results">
+    {% for post in collections.posts | reverse %}
+    <li class="site-search-result">
+      <p class="eyebrow">{{ post.data.category | escape }}</p>
+      <h2><a href="{{ post.url }}">{{ post.data.title | escape }}</a></h2>
+      <p class="site-search-excerpt">{{ post.data.excerpt | default('') | escape }}</p>
+      <template>{{ post.templateContent | striptags | escape }}</template>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+<style>
+  .site-search { max-width: 850px; }
+  .site-search h1 { font-size: clamp(2.75rem, 6vw, 4rem); }
+  .site-search-form { margin: 1.5rem 0 2rem; }
+  .site-search-form label { display: block; margin-bottom: .5rem; font-weight: 700; }
+  .site-search-fields { display: flex; gap: .5rem; }
+  .site-search-fields input {
+    flex: 1;
+    min-width: 0;
+    min-height: 48px;
+    padding: .625rem .85rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--site-card, #fff);
+    color: var(--ink);
+    font: inherit;
+  }
+  .site-search-fields input::placeholder { color: var(--muted); }
+  .site-search-fields input:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+  .site-search-fields button { border: 0; border-radius: 4px; font-size: .875rem; cursor: pointer; }
+  .site-search-status, .site-search-excerpt { color: var(--muted); }
+  .site-search-results { list-style: none; padding: 0; margin: .75rem 0 0; }
+  .site-search-result { padding: 1.1rem 0; border-top: 1px solid var(--line); }
+  .site-search-result h2 { margin: .2rem 0 .5rem; font-size: clamp(1.5rem, 4vw, 2rem); }
+  .site-search-result h2 a:hover { text-decoration: underline; }
+</style>
+<script>
+  (() => {
+    const form = document.querySelector('.site-search-form');
+    const input = form.querySelector('input');
+    const results = document.querySelector('.site-search-results');
+    const status = document.querySelector('.site-search-status');
+
+    function normalize(value) {
+      return value.normalize('NFKD').toLowerCase()
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, ' ').trim();
+    }
+
+    const articles = Array.from(results.children, item => {
+      const title = normalize(item.querySelector('h2').textContent);
+      const summary = normalize(item.querySelector('.eyebrow').textContent + ' ' +
+        item.querySelector('.site-search-excerpt').textContent);
+      const body = normalize(item.querySelector('template').content.textContent);
+      return { item, title, summary, fullText: [title, summary, body].join(' ') };
+    });
+
+    function updateResults() {
+      const query = normalize(input.value);
+      const words = query ? query.split(' ') : [];
+      const ordered = articles.map(article => ({
+        ...article,
+        matches: words.every(word => article.fullText.includes(word)),
+        score: query ? (article.title.includes(query) ? 8 : 0) +
+          words.reduce((score, word) => score +
+            (article.title.includes(word) ? 3 : article.summary.includes(word) ? 1 : 0), 0) : 0,
+      })).sort((a, b) => b.score - a.score);
+
+      let count = 0;
+      for (const article of ordered) {
+        article.item.hidden = !article.matches;
+        if (article.matches) count++;
+        results.append(article.item);
+      }
+
+      if (!query) status.textContent = 'Browse all articles';
+      else if (!count) status.textContent = 'No matches. Try a model name, brand, or a shorter search.';
+      else status.textContent = count === 1 ? '1 article found' : count + ' articles found';
+    }
+
+    input.value = (new URLSearchParams(location.search).get('q') || '').slice(0, 160);
+    form.hidden = false;
+    input.addEventListener('input', updateResults);
+    updateResults();
+  })();
+</script>

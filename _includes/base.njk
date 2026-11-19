@@ -4,10 +4,54 @@
 <meta name="description" content="{{ description or excerpt or 'Baseball equipment comparisons, practical buying guides, and fan gear picks. Find the right fit for your game.' }}">
 <link rel="canonical" href="https://elitebaseballsupply.com{{ page.url }}">
 <meta property="og:title" content="{{ title }}"><meta property="og:description" content="{{ description or excerpt or 'Find the right gear for your game.' }}"><meta property="og:type" content="{{ 'article' if layout == 'post.njk' else 'website' }}"><meta property="og:url" content="https://elitebaseballsupply.com{{ page.url }}"><meta property="og:image" content="{{ (image or '/logo.png') | absoluteUrl }}">
+<script>
+(() => {
+  const key = 'ebs-reading-theme';
+  const deviceTheme = window.matchMedia('(prefers-color-scheme: dark)');
+  const root = document.documentElement;
+  let preference = 'system';
+
+  try {
+    const saved = localStorage.getItem(key);
+    if (saved === 'light' || saved === 'dark') preference = saved;
+  } catch {
+    // The theme still works on the current page.
+  }
+
+  function applyTheme() {
+    root.dataset.siteTheme = preference === 'system'
+      ? (deviceTheme.matches ? 'dark' : 'light')
+      : preference;
+  }
+
+  applyTheme();
+  deviceTheme.addEventListener('change', applyTheme);
+  document.addEventListener('DOMContentLoaded', () => {
+    const control = document.querySelector('#site-theme');
+    control.value = preference;
+    control.parentElement.hidden = false;
+    control.addEventListener('change', () => {
+      preference = control.value;
+      applyTheme();
+      try {
+        localStorage.setItem(key, preference);
+      } catch {
+        // The selected theme remains active on the current page.
+      }
+    });
+  });
+})();
+</script>
 <link rel="icon" href="/logo.png"><link rel="stylesheet" href="/style.css"><script src="/script.js" defer></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZWLCC6JLM"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-QZWLCC6JLM');</script>
 </head><body><a class="skip-link" href="#main">Skip to content</a>
 <div class="topbar">THE RIGHT GEAR. MORE BASEBALL.<span>Independent guides for players & fans</span></div>
-<header class="site-header"><div class="container header-inner"><a class="brand" href="/" aria-label="Elite Baseball Supply home"><img src="/logo.png" width="64" height="64" alt=""><span>ELITE BASEBALL<span class="brand-sub">SUPPLY / THE GEAR GUIDE</span></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation">Menu <span aria-hidden="true">☰</span></button><nav id="main-nav" class="main-nav" aria-label="Main navigation"><a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a><a href="/pages/reviews/" {% if page.url == '/pages/reviews/' %}aria-current="page"{% endif %}>Gear reviews</a><a href="/pages/buying-guides/" {% if page.url == '/pages/buying-guides/' %}aria-current="page"{% endif %}>Buying guides</a><a href="/pages/fan-gear/" {% if page.url == '/pages/fan-gear/' %}aria-current="page"{% endif %}>Fan gear</a><a href="/pages/about/" {% if page.url == '/pages/about/' %}aria-current="page"{% endif %}>About</a><a href="/pages/contact/" {% if page.url == '/pages/contact/' %}aria-current="page"{% endif %}>Contact</a></nav></div></header>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="/" aria-label="Elite Baseball Supply home"><img src="/logo.png" width="64" height="64" alt=""><span>ELITE BASEBALL<span class="brand-sub">SUPPLY / THE GEAR GUIDE</span></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation">Menu <span aria-hidden="true">☰</span></button><nav id="main-nav" class="main-nav" aria-label="Main navigation"><a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a><a href="/pages/reviews/" {% if page.url == '/pages/reviews/' %}aria-current="page"{% endif %}>Gear reviews</a><a href="/pages/buying-guides/" {% if page.url == '/pages/buying-guides/' %}aria-current="page"{% endif %}>Buying guides</a><a href="/pages/fan-gear/" {% if page.url == '/pages/fan-gear/' %}aria-current="page"{% endif %}>Fan gear</a><a href="/pages/about/" {% if page.url == '/pages/about/' %}aria-current="page"{% endif %}>About</a><a href="/pages/contact/" {% if page.url == '/pages/contact/' %}aria-current="page"{% endif %}>Contact</a></nav><div class="site-theme-control" hidden>
+  <select id="site-theme" aria-label="Color theme">
+    <option value="system">System</option>
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+  </select>
+</div></div></header>
 <main id="main">{{ content | safe }}</main>
 <footer class="site-footer"><div class="container footer-grid"><div><a class="footer-brand" href="/">ELITE BASEBALL SUPPLY<span class="accent">.</span></a><p>Find the right gear for your game.<br>Equipment comparisons, buying advice, and picks for baseball fans.</p><nav class="social-links footer-social" aria-label="Follow Elite Baseball Supply"><a class="social-link" href="https://www.facebook.com/profile.php?id=61576621270488" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a class="social-link" href="https://www.instagram.com/elitebaseballsupply/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a class="social-link" href="https://www.pinterest.com/elitebaseballsupply/" target="_blank" rel="noopener noreferrer">Pinterest ↗</a></nav></div><div><h2>Explore</h2><a href="/pages/reviews/">Gear reviews</a><a href="/pages/buying-guides/">Buying guides</a><a href="/pages/fan-gear/">Fan gear</a></div><div><h2>The site</h2><a href="/pages/about/">About us</a><a href="/pages/contact/">Contact</a><a href="/pages/affiliate-disclosure/">Affiliate disclosure</a><a href="/pages/privacy-policy/">Privacy policy</a></div></div><div class="container footer-bottom"><span>© Elite Baseball Supply</span><p>We may earn a commission when you purchase through links on our site, at no extra cost to you.</p></div></footer></body></html>

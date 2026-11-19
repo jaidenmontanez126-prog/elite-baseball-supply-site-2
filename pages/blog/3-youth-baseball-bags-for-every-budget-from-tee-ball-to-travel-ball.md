@@ -42,8 +42,6 @@ Before you buy: Check that both cleats fit in the bottom section with the rest o
 
 [Check the Marucci F5 Bat Pack at DICK’S](https://www.anrdoezrs.net/click-101620676-17023985?url=https%3A%2F%2Fwww.dickssportinggoods.com%2Fp%2Fmarucci-f5-bat-pack-19mccyf5btpckxxxxbbg%2F19mccyf5btpckxxxxbbg%3Fcolor%3DGrey)
 
-![](/images/uploads/19mccyf5btpckxxxxbbg_grey.webp)
-
 The two-minute test that picks the right bag
 
 1. Pack the helmet first. Make sure it clears the opening and the bag closes easily.

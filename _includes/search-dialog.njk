@@ -1,0 +1,215 @@
+<dialog id="gear-search-dialog" aria-labelledby="gear-search-title">
+  <div class="search-dialog-header">
+    <h2 id="gear-search-title">Search baseball gear</h2>
+    <form method="dialog"><button type="submit" autofocus>Close</button></form>
+  </div>
+  <div class="search-dialog-content"><p role="status">Loading search…</p></div>
+</dialog>
+<style>
+  .site-search { max-width: 850px; }
+  .site-search h1 { font-size: clamp(2.75rem, 6vw, 4rem); }
+  .site-search-form { margin: 1.5rem 0 2rem; }
+  .site-search-form label { display: block; margin-bottom: .5rem; font-weight: 700; }
+  .site-search-fields { display: flex; gap: .5rem; }
+  .site-search-fields input {
+    flex: 1;
+    min-width: 0;
+    min-height: 48px;
+    padding: .625rem .85rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--site-card, #fff);
+    color: var(--ink);
+    font: inherit;
+  }
+  .site-search-fields input::placeholder { color: var(--muted); }
+  .site-search-fields input:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+  .site-search-fields button { border: 0; border-radius: 4px; font-size: .875rem; cursor: pointer; }
+  .site-search-status, .site-search-excerpt { color: var(--muted); }
+  .site-search-results { list-style: none; padding: 0; margin: .75rem 0 0; }
+  .site-search-result { padding: 1.1rem 0; border-top: 1px solid var(--line); }
+  .site-search-result h2 { margin: .2rem 0 .5rem; font-size: clamp(1.5rem, 4vw, 2rem); }
+  .site-search-result h2 a:hover { text-decoration: underline; }
+
+  .header-search {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .45rem;
+    min-width: 44px;
+    min-height: 44px;
+    flex: none;
+    font-size: .875rem;
+    font-weight: 700;
+  }
+  .header-search:hover { color: var(--red); }
+  .search-icon {
+    width: .8rem;
+    height: .8rem;
+    border: 1.5px solid currentColor;
+    border-radius: 50%;
+    position: relative;
+    margin-right: .15rem;
+  }
+  .search-icon::after {
+    content: "";
+    position: absolute;
+    width: .38rem;
+    height: 1.5px;
+    background: currentColor;
+    right: -.3rem;
+    bottom: -.13rem;
+    transform: rotate(45deg);
+  }
+  @media (max-width: 900px) {
+    .header-search { margin-left: auto; }
+    .site-theme-control { margin-left: 0; }
+  }
+  @media (max-width: 600px) {
+    .header-search-label { display: none; }
+  }
+  @media (max-width: 480px) {
+    .site-header .brand > span { display: none; }
+  }
+  html:has(#gear-search-dialog[open]) { overflow: hidden; }
+  #gear-search-dialog {
+    width: min(720px, calc(100% - 2rem));
+    max-height: min(720px, calc(100dvh - 2rem));
+    padding: clamp(1rem, 4vw, 1.75rem);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--site-surface, #fff);
+    color: var(--ink);
+  }
+  #gear-search-dialog[open] { display: flex; flex-direction: column; }
+  #gear-search-dialog::backdrop { background: #08121caa; }
+  .search-dialog-header { display: flex; align-items: center; gap: .75rem; justify-content: space-between; }
+  .search-dialog-header h2 { font-size: clamp(1.7rem, 5vw, 2.5rem); }
+  .search-dialog-header button {
+    min-height: 44px;
+    padding: .4rem .8rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    cursor: pointer;
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .search-dialog-content { display: flex; flex-direction: column; min-height: 0; }
+  .search-dialog-content > p, .search-dialog-content > a { margin-top: 1rem; }
+  .search-dialog-content > a { text-decoration: underline; }
+  .search-dialog-content .site-search {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .search-dialog-content .site-search-form { margin: 1rem 0; }
+  .search-dialog-content .site-search-results { min-height: 0; overflow: auto; overscroll-behavior: contain; }
+</style>
+<script>
+  (() => {
+    function initializeSearch(section, inDialog = false) {
+      const form = section.querySelector('.site-search-form');
+      const input = form.querySelector('input');
+      const results = section.querySelector('.site-search-results');
+      const status = section.querySelector('.site-search-status');
+
+      function normalize(value) {
+        return value.normalize('NFKD').toLowerCase()
+          .replace(/[\u0300-\u036f]/g, '')
+          .replace(/[^a-z0-9]+/g, ' ').trim();
+      }
+
+      const articles = Array.from(results.children, item => {
+        const title = normalize(item.querySelector('h2').textContent);
+        const summary = normalize(item.querySelector('.eyebrow').textContent + ' ' +
+          item.querySelector('.site-search-excerpt').textContent);
+        const body = normalize(item.querySelector('template').content.textContent);
+        return { item, title, summary, fullText: [title, summary, body].join(' ') };
+      });
+
+      function updateResults() {
+        const query = normalize(input.value);
+        const words = query ? query.split(' ') : [];
+        const ordered = articles.map(article => ({
+          ...article,
+          matches: words.every(word => article.fullText.includes(word)),
+          score: query ? (article.title.includes(query) ? 8 : 0) +
+            words.reduce((score, word) => score +
+              (article.title.includes(word) ? 3 : article.summary.includes(word) ? 1 : 0), 0) : 0,
+        })).sort((a, b) => b.score - a.score);
+
+        let count = 0;
+        for (const article of ordered) {
+          article.item.hidden = !article.matches;
+          if (article.matches) count++;
+          results.append(article.item);
+        }
+
+        if (!query) status.textContent = 'Browse all articles';
+        else if (!count) status.textContent = 'No matches. Try a model name, brand, or a shorter search.';
+        else status.textContent = count === 1 ? '1 article found' : count + ' articles found';
+      }
+
+      if (!inDialog) input.value = (new URLSearchParams(location.search).get('q') || '').slice(0, 160);
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        if (!inDialog) {
+          const url = new URL(location.href);
+          const query = input.value.trim();
+          if (query) url.searchParams.set('q', query);
+          else url.searchParams.delete('q');
+          history.replaceState(null, '', url);
+        }
+        updateResults();
+      });
+      form.hidden = false;
+      input.addEventListener('input', updateResults);
+      updateResults();
+      return input;
+    }
+
+    const pageSearch = document.querySelector('main .site-search');
+    if (pageSearch) initializeSearch(pageSearch);
+
+    const dialog = document.querySelector('#gear-search-dialog');
+    if (typeof dialog.showModal !== 'function') return;
+    const mount = dialog.querySelector('.search-dialog-content');
+    let ready;
+
+    async function loadSearch() {
+      const response = await fetch('/search/');
+      if (!response.ok) throw new Error('Search page unavailable');
+      const parsed = new DOMParser().parseFromString(await response.text(), 'text/html');
+      const source = parsed.querySelector('main .site-search');
+      if (!source) throw new Error('Search content unavailable');
+
+      const section = document.importNode(source, true);
+      section.querySelector('h1').remove();
+      section.querySelector('input').id = 'dialog-gear-query';
+      section.querySelector('label').htmlFor = 'dialog-gear-query';
+      const input = initializeSearch(section, true);
+      mount.replaceChildren(section);
+      return input;
+    }
+
+    document.querySelector('[data-open-search]').addEventListener('click', async event => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      if (!dialog.open) dialog.showModal();
+
+      try {
+        ready ||= loadSearch();
+        const input = await ready;
+        if (dialog.open) input.focus();
+      } catch {
+        ready = undefined;
+        const fallback = document.createElement('a');
+        fallback.href = '/search/';
+        fallback.textContent = 'Open the search page';
+        mount.replaceChildren(fallback);
+      }
+    });
+  })();
+</script>

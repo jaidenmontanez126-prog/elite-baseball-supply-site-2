@@ -6,4 +6,30 @@ description: Compare baseball bats and gloves with practical advice on features,
 ---
 <section class="page-intro container"><p class="eyebrow">THE EQUIPMENT ROOM</p><h1>Choose your next<br><em>game-day essential.</em></h1><p>Look past the product name. Compare features, understand the trade-offs, and find the right fit.</p><nav class="filter-links" aria-label="Jump to equipment category"><a href="#bats">Bats ↓</a><a href="#gloves">Gloves ↓</a><a href="/pages/fan-gear/">Looking for fan gear? ↗</a></nav></section>
 <section class="section container category-section" id="bats"><div class="section-heading"><div><p class="eyebrow">01 / AT THE PLATE</p><h2>Baseball bats</h2></div><p>Compare construction and drop options.</p></div><div class="stories-grid">{% set posts = collections.posts | categoryPosts('Bats') | reverse %}{% include "cards.njk" %}</div></section>
-<section class="section section-tinted category-section" id="gloves"><div class="container"><div class="section-heading"><div><p class="eyebrow">02 / IN THE FIELD</p><h2>Baseball gloves</h2></div><p>Fit, feel, and the details that matter.</p></div><div class="stories-grid">{% set posts = collections.posts | categoryPosts('Gloves') | reverse %}{% include "cards.njk" %}</div></div></section>
+<div class="section-tinted category-section" id="gloves">
+  <div class="section container">
+    <div class="section-heading"><h2>Baseball gloves</h2></div>
+    <nav class="filter-links" aria-label="Glove categories">
+      <a href="#fielding-gloves">Fielding Gloves ↓</a>
+      <a href="#batting-gloves">Batting Gloves ↓</a>
+    </nav>
+  </div>
+  <section class="section container category-section" id="fielding-gloves">
+    <div class="section-heading"><h2>Fielding Gloves</h2><p>Find the right fit for catching and fielding.</p></div>
+    {% set posts = collections.posts | categoryPosts('Fielding Gloves') | reverse %}
+    {% if posts.length %}
+      <div class="stories-grid">{% include "cards.njk" %}</div>
+    {% else %}
+      <p>Fielding glove guides are coming soon.</p>
+    {% endif %}
+  </section>
+  <section class="section container category-section" id="batting-gloves">
+    <div class="section-heading"><h2>Batting Gloves</h2><p>Compare fit, feel, and grip at the plate.</p></div>
+    {% set posts = collections.posts | categoryPosts('Batting Gloves') | reverse %}
+    {% if posts.length %}
+      <div class="stories-grid">{% include "cards.njk" %}</div>
+    {% else %}
+      <p>Batting glove guides are coming soon.</p>
+    {% endif %}
+  </section>
+</div>

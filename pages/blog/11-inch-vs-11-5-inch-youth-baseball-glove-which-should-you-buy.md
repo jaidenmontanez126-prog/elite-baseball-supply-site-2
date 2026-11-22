@@ -4,7 +4,7 @@ excerpt: Should your child use an 11-inch or 11.5-inch baseball glove? Compare
   the Mizuno Prospect PowerClose, Rawlings Highlight, and Wilson A500, and use a
   quick fit test to see which glove your player can control and close
   comfortably.
-category: Gloves
+category: Fielding Gloves
 author: Elite Baseball Supply
 date: 2026-11-21T23:46:17.556Z
 ---

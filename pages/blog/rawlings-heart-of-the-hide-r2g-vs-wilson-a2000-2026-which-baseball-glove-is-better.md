@@ -5,7 +5,7 @@ excerpt: "Rawlings Heart of the Hide R2G vs. Wilson A2000: Which premium
   baseball glove is worth $329.99 in 2026? Compare leather quality, break-in
   time, comfort, durability, and overall value to find the best glove for high
   school, college, and serious adult baseball players."
-category: Gloves
+category: Fielding Gloves
 author: Elite Baseball Supply
 date: 2026-10-31T21:12:24.574Z
 ---

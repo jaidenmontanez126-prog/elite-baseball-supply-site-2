@@ -2,7 +2,7 @@
 title: How Should Youth Batting Gloves Fit? 3 Fit Checks and 2 Pairs to Try
 excerpt: Learn how to check the fingertips, palm, and wrist on youth batting
   gloves, then compare two Nike and Franklin options at DICK’S Sporting Goods.
-category: Buying Guides
+category: Batting Gloves
 author: Elite Baseball Supply
 date: 2026-11-19T15:01:11.856Z
 ---

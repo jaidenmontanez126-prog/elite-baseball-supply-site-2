@@ -10,7 +10,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("style.css");
     eleventyConfig.addPassthroughCopy("robots.txt");
     eleventyConfig.ignores.add("test-post.html");
-    eleventyConfig.addFilter("categoryPosts", (posts, category) => posts.filter(post => category === "Fan" ? !["Bats", "Gloves"].includes(post.data.category) : post.data.category === category));
+    eleventyConfig.addFilter("categoryPosts", (posts, category) => posts.filter(post => {
+      const postCategory = post.data.category === "Gloves" ? "Fielding Gloves" : post.data.category;
+      if (category === "Fan") return !["Bats", "Fielding Gloves", "Batting Gloves"].includes(postCategory);
+      return postCategory === category;
+    }));
     eleventyConfig.addFilter("isoDate", date => new Date(date).toISOString());
     eleventyConfig.addTransform("affiliateLinks", function(content) {
       if (this.page.outputPath && this.page.outputPath.endsWith(".html")) return content.replace(/<a\b([^>]*href="https?:\/\/[^"]*(?:93n6tx|kqzyfj|dpbolvw|anrdoezrs|jdoqocy|tkqlhce)[^"]*"[^>]*)>/gi, (match, attrs) => /\brel=/.test(attrs) ? match : `<a${attrs} rel="sponsored noopener">`);

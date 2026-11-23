@@ -34,6 +34,8 @@ Have your player put it on, show a target, and close it around a baseball with o
 
 ### [Mizuno Franchise 12.5-Inch — For a regular first baseman who wants more reach](https://www.dpbolvw.net/click-101620676-17023985?url=https%3A%2F%2Fwww.dickssportinggoods.com%2Fp%2Fmizuno-12-5-franchise-series-first-base-mitt-24mizafrnchs1b125fpg%2F24mizafrnchs1b125fpg%3Fcolor%3DTan%252FBlack)
 
+![](/images/uploads/24mizafrnchs1b125fpg_tan_black.webp)
+
 Try the Mizuno Franchise if your player starts at first regularly and can handle a longer mitt. I’d have them try it on before buying, especially if they’re coming from a shorter youth glove. The extra length helps only if they can move the mitt quickly and close it around the ball.
 
 If you can play catch before deciding, mix in a few gentle low throws. Watch whether your player can turn the mitt down, receive the ball, and bring it back without the mitt shifting on their hand.

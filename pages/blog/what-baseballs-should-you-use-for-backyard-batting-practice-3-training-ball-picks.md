@@ -4,7 +4,7 @@ title: What Baseballs Should You Use for Backyard Batting Practice? 3 Training
 excerpt: What baseballs should you use for backyard batting practice? Compare
   three SKLZ and Marucci training ball packs and get a simple tee drill for
   each.
-image: /images/uploads/add-a-heading-3.png
+image: /images/uploads/add-a-heading-3-copy.png
 category: Buying Guides
 author: Elite Baseball Supply
 date: 2026-11-23T20:24:10.454Z

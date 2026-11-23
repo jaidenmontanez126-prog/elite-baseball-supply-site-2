@@ -3,6 +3,7 @@ title: Does Your Child Need a First Base Mitt? When to Buy One and What Size to 
 excerpt: Does your child need a first base mitt or can they use their regular
   glove? See when it’s worth buying one and compare 11.5-inch Rawlings and
   12.5-inch Mizuno options.
+image: /images/uploads/add-a-heading-3.png
 category: Fielding Gloves
 author: Elite Baseball Supply
 date: 2026-11-23T22:22:10.734Z
